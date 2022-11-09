@@ -1,0 +1,23 @@
+using System;
+class Programa
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Executando o projeto Desafio - Imprimir fatorial de 1 a 10");
+        Console.WriteLine();
+
+        int fatorial = 1;
+        int numero = 10; //Insira o número que deseja calcular o fatorial
+
+        for(int contador = 1; contador <= numero; contador++)
+        {
+            fatorial = contador * fatorial;
+            Console.WriteLine("O fatorial de " + contador + " é:" + fatorial);
+        }
+        
+
+        Console.WriteLine();
+        Console.WriteLine("Tecle enter para fechar ...");
+        Console.ReadLine();
+    }
+}
