@@ -6,7 +6,7 @@ class Programa
         Console.WriteLine("Executando o projeto Desafio - Multiplo de 3");
         Console.WriteLine();
 
-        int multiplo = 6;
+        int multiplo = 3;
 
         for (int numero = 1; numero <= multiplo; numero++)
         {
