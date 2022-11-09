@@ -1,1 +1,29 @@
+using System;
+class Programa
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Executando o projeto Desafio - Multiplo de 3");
+        Console.WriteLine();
+
+        int multiplo = 6;
+
+        for (int numero = 1; numero <= multiplo; numero++)
+        {
+            if (numero % 3 == 0)
+            {
+                Console.WriteLine("O número:" + numero + " é múltiplo de " + multiplo);
+                
+            }
+            else //Esse else é para mostrar quais números não são múltiplos - Se não quiser que essa informação apareça, basta comentá-la.
+            {
+                Console.WriteLine("O número:" + numero + " não é múltiplo de " + multiplo);
+                Console.WriteLine();
+            }
+        }
+
+        Console.WriteLine("Tecle enter para fechar ...");
+        Console.ReadLine();
+    }
+}
 
