@@ -6,12 +6,21 @@ contaDoAndre.numero_agencia = 15;
 contaDoAndre.conta = "1010-X";
 contaDoAndre.saldo = 100;
 
-
-
 Console.WriteLine("Saldo da conta do André é de R$ " + contaDoAndre.saldo);
 contaDoAndre.Depositar(100); //Simulando depósitos
 Console.WriteLine("Saldo da conta do André pós-deposito é de R$ " + contaDoAndre.saldo);
 Console.WriteLine();
+
+if(contaDoAndre.Sacar(300) == true)//Simulando saque
+{
+    Console.WriteLine("Saldo da conta do André pós-saque é de R$ " + contaDoAndre.saldo);
+    Console.WriteLine();
+}
+else
+{
+    Console.WriteLine("Saldo insuficiente. Não foi possível realizar o saque, o saldo atual é de R$ " + contaDoAndre.saldo);
+    Console.WriteLine();
+}
 
 //Criando o objeto do tipo ContaCorrente
 ContaCorrente conta = new ContaCorrente();
