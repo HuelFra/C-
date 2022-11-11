@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SupermercadoMenorPreco
+{
+    internal class Produtos
+    {
+        public string nome;
+        public string fabricante;
+        public int codigo_barras;
+        public double valor_unitario;
+        public double valor_compra;
+        public int quantidade_estoque;
+    }
+}
