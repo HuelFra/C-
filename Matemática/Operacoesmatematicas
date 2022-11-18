@@ -1,0 +1,16 @@
+using System;
+
+namespace Matematica
+{
+    class operacoesmatematicas
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("O valor máximo é: " + Math.Max(5, 10)); //Mostra o valor máximo
+            Console.WriteLine("A raiz quadrada de 64 é: " + Math.Sqrt(64)); //Calula a raiz quadrada
+            Console.WriteLine("O valor absoluto positivo é: " + Math.Abs(-4.7));//Calcula o valor absoluto positivo
+            Console.WriteLine("O valor mais próximo de 9.99 é: " + Math.Round(9.99));//Arredonda o número para um mais próximo
+
+        }
+    }
+}
