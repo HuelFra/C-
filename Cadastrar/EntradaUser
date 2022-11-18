@@ -1,0 +1,24 @@
+//Console.WriteLine()é usado para gerar (imprimir) valores
+//Console.ReadLine()para obter a entrada do usuário
+
+using System;
+
+namespace Cadastrar
+{
+   class Cadastro
+   {
+      static void Main(String[] args)
+      {
+            Console.Write("Entre com o nome: ");
+            string username = Console.ReadLine();
+            Console.WriteLine("O nome do Usuário é: " + username);
+            Console.WriteLine();
+
+            Console.Write("Entre com a idade: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Sua idade é: " + age);
+            Console.WriteLine();
+      }
+   }
+   
+}
