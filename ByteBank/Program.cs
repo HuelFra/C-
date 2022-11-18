@@ -7,26 +7,34 @@ contaDoAndre.conta = "1010-X";
 contaDoAndre.saldo = 100;
 
 Console.WriteLine("Saldo da conta do André é de R$ " + contaDoAndre.saldo);
-contaDoAndre.Depositar(100); //Simulando depósitos
-Console.WriteLine("Saldo da conta do André pós-deposito é de R$ " + contaDoAndre.saldo);
+
+ContaCorrente contaDaMaria = new ContaCorrente();
+contaDaMaria.titular = "Maria Souza";
+contaDaMaria.numero_agencia = 17;
+contaDaMaria.conta = "1010-5";
+contaDaMaria.saldo = 350;
+
+Console.WriteLine("Saldo da conta da Maria é de R$ " + contaDaMaria.saldo);
+
+//Realizando a transferência
+contaDoAndre.Transferir(50, contaDaMaria);
+Console.WriteLine("Saldo do André = " + contaDoAndre.saldo);
+Console.WriteLine("Saldo da Maria = " + contaDaMaria.saldo);
+
+ContaCorrente contaDoPedro = new ContaCorrente();
+contaDoPedro.titular = "Pedro Silva";
+Console.WriteLine(contaDoPedro.titular);
+Console.WriteLine(contaDoPedro.conta);
+Console.WriteLine(contaDoPedro.numero_agencia);
+Console.WriteLine(contaDoPedro.saldo);
 Console.WriteLine();
 
-if(contaDoAndre.Sacar(300) == true)//Simulando saque
-{
-    Console.WriteLine("Saldo da conta do André pós-saque é de R$ " + contaDoAndre.saldo);
-    Console.WriteLine();
-}
-else
-{
-    Console.WriteLine("Saldo insuficiente. Não foi possível realizar o saque, o saldo atual é de R$ " + contaDoAndre.saldo);
-    Console.WriteLine();
-}
+ContaCorrente ExibirInformacoesGerais = new ContaCorrente();
+ExibirInformacoesGerais.titular = "Joaquim Teste";
+ExibirInformacoesGerais.conta = "1010-22";
+ExibirInformacoesGerais.numero_agencia = 22;
 
-//Criando o objeto do tipo ContaCorrente
-ContaCorrente conta = new ContaCorrente();
-Console.WriteLine($"Titular da Conta: {conta.titular}");
-Console.WriteLine($"Número da conta: {conta.conta}");
-Console.WriteLine($"Agência: {conta.numero_agencia}");
-Console.WriteLine($"Saldo R$ {String.Format("{0:0.00}", conta.saldo)}");
-
-Console.ReadKey();
+Console.WriteLine("Numero_agencia: " + ExibirInformacoesGerais.numero_agencia);
+Console.WriteLine("Conta: " + ExibirInformacoesGerais.conta);
+Console.WriteLine("titular: " + ExibirInformacoesGerais.titular);
+Console.WriteLine("Saldo: " + ExibirInformacoesGerais.saldo);
