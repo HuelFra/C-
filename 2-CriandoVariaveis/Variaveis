@@ -1,0 +1,69 @@
+/* 
+Tipos de Variáveis:
+ -> int: armazena inteiros(números inteiros), sem decimais, como 123 ou -123
+ -> double: armazena números de ponto flutuante, com decimais, como 19,99 ou -19,99
+ -> char: armazena caracteres únicos, como 'a' ou 'B'. Os valores de caracteres são cercados por aspas simples
+ -> string: armazena texto, como "Hello World". Os valores de string são colocados entre aspas duplas
+ -> bool: armazena valores com dois estados: verdadeiro ou falso 
+*/
+
+
+using System;
+
+namespace Variaveis
+
+{
+    class declararvariaveis
+    {
+        static void Main(string[] args)
+        {
+            string name = "John";
+            Console.WriteLine("Nome: " + name);
+            Console.WriteLine();
+
+            int myNum1 = 15;
+            myNum1 = 20;
+            Console.WriteLine("Número: " + myNum1);
+            Console.WriteLine();
+
+            int myNum = 5;
+            double myDoubleNum = 5.99D;
+            char myLetter = 'D';
+            bool myBool = true;
+            string myText = "Hello";
+            Console.WriteLine(myNum);
+            Console.WriteLine(myDoubleNum);
+            Console.WriteLine(myLetter);
+            Console.WriteLine(myBool);
+            Console.WriteLine(myText);
+            Console.WriteLine();
+
+            string firstName = "Maria ";
+            string lastName = "Doe ";
+            string fullName = firstName + lastName;
+            Console.WriteLine(fullName);
+            Console.WriteLine();
+
+            int x = 5;
+            int y = 6;
+            Console.WriteLine(x + y);
+            Console.WriteLine();
+
+            //Declarando muitas variáveis
+            int a = 5, b = 6, c = 50;
+            Console.WriteLine(a + b + c);
+            Console.WriteLine();
+
+            int d, e, f;
+            d = e = f = 50;
+            Console.WriteLine(d + e + f);
+            Console.WriteLine();
+
+            int minutesPerHour = 60;
+            int m = 60;
+            Console.WriteLine(minutesPerHour);
+            Console.WriteLine(m);
+            Console.WriteLine();
+        }
+    }
+}
