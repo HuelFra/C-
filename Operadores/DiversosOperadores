@@ -1,0 +1,110 @@
+//Operadores aritméticos são usados para realizar operações matemáticas comuns:
+// Adição: + 
+// Subtração: - 
+// Multiplicação: * 
+// Divisão: /
+// Módulo: %
+// Incremento: ++
+// Decremento: --
+
+//Operadores de atribuição:
+// Para atribuir o valor a uma variável, usamos =
+// Para adicionar um valor a uma variável, usamos +=
+// Para diminuir um valor a uma variável, usamos -=
+// Para multiplicar um valor a uma variável, usamos *=
+// Para calcular o módulo de um valor a uma variável, usamos %=
+
+//Operadores de Comparação
+// Compara dois valores e o retorno é true ou False
+// Igual a ==
+// Diferente !=
+// Maior que >
+// Menor que <
+// Maior ou igual a >=
+// Menor ou igual a <=
+
+//Operadores Lógicos
+// && => AND - retorna True se ambas premissas forem verdadeiras
+// || => OR - retorna True se uma das premissas for verdadeira
+// ! => ÑEGATIVA - Reverte o resultado, mostra o resultado contrário
+
+using System;
+
+namespace Operadores
+{
+    class Operador
+    {
+        static void Main(string[] args)
+        {
+            //Somando valores
+            int x = 120 + 50;
+            Console.WriteLine("O valor da variável x é: " + x);
+
+            //Somando uma variável e um valor, ou uma variável e outra variável
+            int sum1 = 100 + 50;
+            int sum2 = sum1 + 250;
+            int sum3 = sum2 + sum2;
+            Console.WriteLine("O valor de sum1 é: " + sum1);
+            Console.WriteLine("O valor de sum2 é: " + sum2);
+            Console.WriteLine("O valor de sum3 é: " + sum3);
+            Console.WriteLine();
+
+            //Utilizando operadores de atribuição
+            int a = 10;
+            Console.WriteLine("O valor da variável a é: " + a);
+            a += 5;
+            Console.WriteLine("O novo valor da variável a é: " + a);
+            Console.WriteLine();
+
+            //Utilizando operadores de comparação
+            int b = 5;
+            int c = 3;
+            int d = 4;
+            int e = d;
+            int f = 2;
+
+            Console.WriteLine("A variável b: " + b);
+            Console.WriteLine("A variável c: " + c);
+            Console.WriteLine("A variável b é maior que a variável c? " + (b > c));
+            Console.WriteLine();
+
+            Console.WriteLine("A variável d, vale: " + d);
+            Console.WriteLine("A variável e, vale: " + e);
+            Console.WriteLine("Os valores de d e e são iguais? " + (d == e));
+            Console.WriteLine();
+
+            Console.WriteLine("A variável d, vale: " + d);
+            Console.WriteLine("A variável e, vale: " + e);
+            Console.WriteLine("Os valores de d e e são diferentes? " + (d != e));
+            Console.WriteLine();
+
+            Console.WriteLine("A variável c, vale: " + c);
+            Console.WriteLine("A variável f, vale: " + f);
+            Console.WriteLine("O valor de c é menor que o valor de f? " + (c < f));
+            Console.WriteLine();
+
+            Console.WriteLine("A variável b,vale: " + b);
+            Console.WriteLine("A variável f,vale: " + f);
+            Console.WriteLine("O valor de b é maior ou igual ao valor de f? " + (b >= f));
+            Console.WriteLine();
+
+            Console.WriteLine("A variável b,vale: " + b);
+            Console.WriteLine("A variável f,vale: " + f);
+            Console.WriteLine("O valor de b é menor ou igual ao valor de f? " + (b <= f));
+            Console.WriteLine();
+
+            //Utilizando operadores lógicos
+            int g = 5;
+            Console.WriteLine("O valor de g é: " + g);
+            Console.WriteLine(" O valor de g é menor que 5 e menor que 10? " + (g < 5 && g < 10)); //Para ser True, as duas condições tem que ser True
+            Console.WriteLine();
+
+            Console.WriteLine(" O valor de g é menor que 5 ou menor que 10? " + (g < 5 || g < 10)); //Para ser True, basta que uma das condições seja True
+            Console.WriteLine();
+
+            Console.WriteLine(" O valor de g é menor que 5 ou menor que 10? " + !(g < 5 && g < 10)); //Para ser True, basta que uma das condições seja True
+            Console.WriteLine();
+
+        }
+    }
+}
