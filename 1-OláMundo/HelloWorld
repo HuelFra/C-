@@ -1,4 +1,4 @@
-// using System = significa que podemos usar classes do Systemnamespace
+// using System = significa que podemos usar classes do System namespace
 // namespace  = é usada para organizar seu código e é um contêiner para classes e outros namespaces
 // class é um container para dados e métodos, que traz funcionalidade ao seu programa. 
 // { = marca início de um bloco e código
