@@ -5,6 +5,11 @@ Tipos de Variáveis:
  -> char: armazena caracteres únicos, como 'a' ou 'B'. Os valores de caracteres são cercados por aspas simples
  -> string: armazena texto, como "Hello World". Os valores de string são colocados entre aspas duplas
  -> bool: armazena valores com dois estados: verdadeiro ou falso 
+ 
+ Usar floatou double?
+ A precisão de um valor de ponto flutuante indica quantos dígitos o valor pode ter após o ponto decimal. 
+ A precisão de floaté de apenas seis ou sete dígitos decimais, enquanto doubleas variáveis, têm uma precisão de cerca de 15 dígitos. 
+ Portanto, é mais seguro usar doublepara a maioria dos cálculos.
 */
 
 
