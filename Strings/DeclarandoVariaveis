@@ -1,0 +1,110 @@
+using System;
+
+namespace DeclarandoVariaveis
+{
+    class Variaveis
+    {
+      static void Main(String[] args)
+      {
+            string greeting = "Hello";
+            string greeting2 = "Nice to meet you";
+            string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Console.WriteLine("O tamanho da string txt é: " + txt.Length);
+            string txt1 = "Hello World";
+            Console.WriteLine(txt1.ToUpper()); //ToUpper = transforma a string em maiuscula
+            Console.WriteLine(txt1.ToLower()); //ToUpper = transforma a string em minuscula
+            Console.WriteLine();
+
+            //Concatenando Strings
+            string primeironome = "João ";
+            string sobrenome = "Fulano";
+            string nome = primeironome + sobrenome; //o operador + é uma forma de concatenar
+            Console.WriteLine(nome);
+
+            //Outra forma de Concatenação de Strings
+            string primeironome1 = "Maria ";
+            string sobrenome1 = "Beltrana";
+            string nome1 = string.Concat(primeironome1, sobrenome1);//Concat é outra forma de concatenação
+            Console.WriteLine(nome1);
+            Console.WriteLine();
+
+            //Somando números
+            int x = 10;
+            int y = 20;
+            int z = x + y;
+            Console.WriteLine("O valor de x é: " + x);
+            Console.WriteLine("O valor de y é: " + y);
+            Console.WriteLine("A soma de x + y é: " + z);
+            Console.WriteLine();
+
+            //Tratando esses números como strings
+            string x1 = "10";
+            string y1 = "20";
+            string z1 = x1 + y1;
+            Console.WriteLine("O valor de x é: " + x1);
+            Console.WriteLine("O valor de y é: " + y1);
+            Console.WriteLine("A soma de x + y é: " + z1);
+            Console.WriteLine();
+
+            //Interpolação de Strings = mais uma forma de Concatenar Strings
+            string primeironome2 = "João";
+            string sobrenome2 = "Cicrano";
+            string nome2 = $"Nome completo: {primeironome2} {sobrenome2}";
+            Console.WriteLine(nome2);
+
+            //Acessando os caracteres de uma String referindo-se ao seu índice
+            string minhaString = "Olá";
+            Console.WriteLine("A primeira letra da palavra Olá é: " + minhaString[0]);
+            Console.WriteLine("A segunda letra da palavra Olá é: " + minhaString[1]);
+            Console.WriteLine("A terceira letra da palavra Olá é: " + minhaString[2]);
+            Console.WriteLine();
+
+            //Outra forma de encontrar a posição de um índice de um caractere específico é usando o IndexOf()
+            string myString1 = "Paralelepipedo";
+            Console.WriteLine("A letra a na palavra paralelelpipedo,se encontra na posição: " + myString1.IndexOf("a"));
+            Console.WriteLine();
+
+            //Podemos extrair um caracter de uma string, usando junto com o indexOf é o método Substring
+            string nome3 = "João Cicrano";
+            int charPos = nome3.IndexOf("C");
+            string sobrenome3 = nome3.Substring(charPos);
+            Console.WriteLine(nome3);
+            Console.WriteLine("O sobrenome de João é: " + sobrenome3);
+            Console.WriteLine();
+
+            //Caracteres Especiais = \
+            // \t  = Tab; \n = nova linha; \b = Espaço
+            string txt2 = "\tNós somos chamados de \n\"Vikings\" \b do Norte";//O caractere \ transforma caracteres especiais em caracteres de string
+            Console.WriteLine(txt2);
+            Console.WriteLine();
+
+            //Booleanos
+            bool isCSharpFun = true;
+            bool isFishTasty = false;
+            Console.WriteLine(isCSharpFun);
+            Console.WriteLine(isFishTasty);
+            Console.WriteLine();
+
+            //Booleano comparativo
+            int x2 = 10;
+            int y2 = 9;
+            Console.WriteLine("O valor de x é: " + x2);
+            Console.WriteLine("O valor de y é: " + y2);
+            Console.WriteLine("O valor de x é maior que o valor de y? " + (x2 > y2));
+            Console.WriteLine();
+
+            //Representando a condição anterior de outra forma
+            Console.WriteLine("10 é maior que 9?" + (10 > 9));
+            Console.WriteLine();
+
+            //Usando o == para avaliar a expressão
+            int x3 = 10;
+            Console.WriteLine("O valor de x3 é: "+ x3 + "\nO valor de x3 é igual a 10? " + (x3 == 10));
+            Console.WriteLine();
+            Console.WriteLine("O valor de x3 é: " + x3 + "\nO valor de x3 é igual a 15? " + (x3 == 15));
+            Console.WriteLine();
+        }
+    }
+    
+}
+
