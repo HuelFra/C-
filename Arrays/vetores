@@ -1,0 +1,94 @@
+/* Arrays = são usados ​​para armazenar vários valores em uma única variável, em vez de declarar variáveis ​​separadas para cada valor.
+ */
+
+using System;
+using System.Linq;
+
+namespace Arrays
+{
+    class Vetores
+    {
+        static void Main(String[] args)
+        {
+            string[] carros = { "Volvo", "BMW", "Ford", "Mazda" };
+            Console.WriteLine(carros[0]);
+            Console.WriteLine();
+
+            //Exemplo da declaração de um array para valores inteiros
+            int[] meunumero = { 10, 20, 30, 40 }; 
+
+            //Alterando o valor de um aray(vetor)
+            string[] carrosnovos = { "Volvo", "BMW", "Ford", "Mazda" };
+            carrosnovos[0] = "Opel";
+            Console.WriteLine(carrosnovos[0]);
+            Console.WriteLine();
+
+            //Descobrinfdo o tamanho de um array
+            string[] carros1= { "Volvo", "BMW", "Ford", "Mazda" };
+            Console.WriteLine(carros1.Length);
+            Console.WriteLine();
+
+            //Outras maneiras de criar um vetor
+            //Com 4 elementos e sem valores
+            string[] bicicletas = new string[4];
+
+            //Com 4 elementos e com seus valores
+            string[] patins = new string[4] { "Freestyle", "Hóquei", "Speed", "Downhill" };
+            Console.WriteLine();
+
+            //Vetor com 4 elementos sem especificar o tamanho
+            string[] brinquedos = new string[] { "bola", "carrinho", "boneca", "peteca", "xadrez" };
+
+            //Vetor com 4 elementos, omitindo a entrada e sem especificar o tamanho
+            string[] sucos = { "Laranja", "Uva", "Maracujá", "Acerola" };
+            Console.WriteLine("Os sucos que temos são: " + sucos[0] + "; " + sucos[1] + "; " + sucos[2] + "; " + sucos[3]);
+            Console.WriteLine("O tamanho desse vetor é de: " + sucos.Length + " elementos");
+            Console.WriteLine();
+
+            //Percorrendo um Array
+            string[] celular = { "Motorola", "Samsung", "Apple", "Xiaomi", "Asus" };
+            for (int a = 0; a < celular.Length; a++)
+            {
+                Console.Write("Marcas de celular: " + celular[a]);
+                Console.WriteLine();    
+            }
+
+            //Percorrendo um Aray com Foreach
+            Console.WriteLine();
+            string[] computadores = { "Samsung ", "Dell ", "Acer " };
+            foreach(string b in computadores)
+            {
+                Console.WriteLine("Marcas de computadores: " + b);
+            }
+            Console.WriteLine();
+
+            //Ordenar um Array
+            //Utilizando o Sort. O Sort, classifica um array alfabeticamente ou em ordem crescente
+            string[] brinquedos1 = new string[] { "bola", "carrinho", "boneca", "peteca", "xadrez" };
+            Array.Sort(brinquedos1);
+            foreach (string c in brinquedos1)
+            {
+                Console.Write("Brinquedos: " + c + "; ");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            //Ordenando números
+            int[] numeros = {5,1,8,9};
+            Array.Sort(numeros);
+            foreach(int d in numeros)
+            {
+                Console.WriteLine(d);
+            }
+            Console.WriteLine();
+
+            //Outros métodos de array úteis, como Min, Maxe Sum, podem ser encontrados no namespace System.Linq
+            int[] variosnumeros = { 3, 6, 8, 2, 1, 5 };
+            Console.WriteLine(variosnumeros[0] +"; " + variosnumeros[1] + "; " + variosnumeros[2] + "; " + variosnumeros[3] + "; " + variosnumeros[4] + "; " + variosnumeros[5]);
+            Console.WriteLine("O maior número da lista é: " + variosnumeros.Max());
+            Console.WriteLine("O menor número da lista é: " + variosnumeros.Min());
+            Console.WriteLine("A soma desses valores é: " + variosnumeros.Sum());
+
+        }
+    }
+}
