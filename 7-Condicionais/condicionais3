@@ -1,0 +1,183 @@
+/*
+Use if para especificar um bloco de código a ser executado, se uma condição especificada for verdadeira
+Use else para especificar um bloco de código a ser executado, se a mesma condição for falsa
+Use else if para especificar uma nova condição para testar, se a primeira condição for falsa
+Use switch para especificar muitos blocos alternativos de código a serem executados
+*/
+
+using System;
+using System.Diagnostics.Tracing;
+
+namespace Condicionais
+{
+    class Condicional
+    {
+        static void Main(String[] args)
+        {
+            int a = 20;
+            int b = 18;
+            Console.WriteLine("O valor de a é: " + a + " \nO valor de b é: " + b + " \nO valor de a é maior que  valor de b? " + (a > b) );
+            Console.WriteLine();
+
+            //Outra forma comparação - utilizando if, else
+            if (a > b)
+            {
+                Console.WriteLine("O valor de a é: " + a + " \nO valor de b é: " + b + " \nO valor de a é maior que  valor de b? " + (a > b));
+            }
+
+            int time = 22;
+            if (time < 10)
+            {
+                Console.WriteLine("Boa tarde!");
+            }
+            else if (time < 20)
+            {
+                Console.WriteLine("Bom dia!");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Boa noite!");
+                Console.WriteLine();
+            }
+
+            //Outra forma de comparação
+            int time1 = 10;
+            string result = (time1 < 18) ? "Bom dia!" : "Boa noite!";
+            Console.WriteLine(result);
+
+            //Comparação com switch
+            //A switch expressão é avaliada uma vez
+            //O valor da expressão é comparado com os valores de cada case
+            //Se houver uma correspondência, o bloco de código associado é executado
+            //A palavra break é a chave para sair do bloco switch
+            //A palavra default é opcional e especifica algum código a ser executado se não houver correspondência
+
+            //verificando o dia da semana, usando apenas a variável
+            int dia = 3;
+            switch(dia)
+            {
+                case 1:
+                    Console.WriteLine("Segunda-feira");
+                    Console.WriteLine();
+                    break;
+                case 2:
+                    Console.WriteLine("Terça-feira");
+                    Console.WriteLine();
+                    break;
+                case 3:
+                    Console.WriteLine("Quarta-feira");
+                    Console.WriteLine();
+                    break;
+                case 4:
+                    Console.WriteLine("Quinta-feira");
+                    Console.WriteLine();
+                    break;
+                case 5:
+                    Console.WriteLine("Sexta-feira");
+                    Console.WriteLine();
+                    break;
+                case 6:
+                    Console.WriteLine("Sábado");
+                    Console.WriteLine();
+                    break;
+                case 7:
+                    Console.WriteLine("Domingo");
+                    Console.WriteLine();
+                    break;            
+            }
+
+            //verificando o dia da semana, indicando um valor padrão (default)
+            int diasemana = 4;
+            switch(diasemana)
+            {
+                case 6:
+                    Console.WriteLine("Hoje é Sábado");
+                    Console.WriteLine();
+                    break;
+                case 7:
+                    Console.WriteLine("Hoje é Domingo");
+                    Console.WriteLine();
+                    break;
+                default:
+                    Console.WriteLine("Aguardando o fim de semana");
+                    Console.WriteLine();
+                    break;
+            }
+
+            //Condicional - while: enquanto faça
+            //O loop while percorre um bloco de código,desde que uma condição especificada seja True
+
+            int i = 0;
+            while(i < 5)
+            {
+                Console.WriteLine(i);
+                i++; //Deve existir esse incremento para que a variável alcance o valor do loop
+            }
+            Console.WriteLine();
+
+            //Condicional Do/While
+            //O loop Do/While é uma variante do while loop.
+            //O loop executará o bloco de código uma vez, antes de verificar se a condição é verdadeira
+            int i1 = 0;
+            do
+            {
+                Console.WriteLine(i1);
+                i1++;
+            }
+            while (i1 < 5);
+            Console.WriteLine();
+
+            //Condicional For Loop
+            //Usado quando sabemos quantas vezes devemos percorrer um bloco de código
+            /*A instrução 1 é executada (uma vez) antes da execução do bloco de código.
+              A instrução 2 define a condição para executar o bloco de código.
+              A instrução 3 é executada (todas as vezes) após a execução do bloco de código.
+            */
+            for (int k = 0; k < 6; k++)
+            {
+                Console.WriteLine(k);
+                Console.WriteLine();
+            }
+
+            //Verificando valores pares
+            for(int l = 0; l <= 10; l = l + 2)
+            {
+                Console.Write(" " + l + ";");
+            }                
+            Console.WriteLine();
+
+            //Foreach = é usado exclusivamente para percorrer os elementos em uma matriz
+            //Gera elementos na matriz carros, usando o loop foreach
+            Console.WriteLine();
+            string[] carros = { "Volvo", "BMW", "Ford", "Mazda" };
+            foreach (string m in carros)
+            {
+                Console.WriteLine(m);             
+            }
+            Console.WriteLine();
+
+            //Break = Também pode ser usado de um loop
+            Console.WriteLine();
+            for (int n = 0; n < 10; n++)
+            {
+                if(i==4)
+                {
+                    break;
+                }
+                Console.WriteLine(n);
+            }
+            Console.WriteLine();
+            //Continue = interrompe uma iteração no loop, se ocorrer uma condição especificada e continua com a próxima iteração do loop
+            for (int o = 0; o < 10; o++)
+            {
+                if(o == 4)
+                {
+                    continue;
+                }
+                Console.Write(o);
+            }
+            Console.WriteLine();
+        } 
+    }
+}
