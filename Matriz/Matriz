@@ -1,0 +1,40 @@
+using System;
+
+namespace Matriz
+{
+    class matrizes
+    {
+        static void Main(string[] args)
+        {
+            //Criando matrizes
+            //matriz Bidimensional = a única vírgula [,]especifica que a matriz é bidimensional. Uma matriz tridimensional teria duas vírgulas: int[,,].
+            int[,] numeros = { { 1, 4, 2 }, { 3, 6, 8 } };
+
+            Console.WriteLine("{ { " + numeros[0,0] + "," + numeros[0,1] + "," + numeros[0,2] + "," + "}, " + "{ " + numeros[1,0] + "," + numeros[1, 1] + "," + numeros[1, 2] + "} }");
+
+            Console.WriteLine("O número que está na primeira linha e na terceira coluna é: " + numeros[0, 2]); //0 corresponde a primeira linha e 2 corresponde a terceira coluna
+            Console.WriteLine();
+
+            //Matriz Bidimensional com o foreach
+            int[,] matriz1 = { { 1, 4, 6, }, { 3, 7, 9 } };
+            foreach(int a in matriz1)
+            {
+                Console.WriteLine("Números da matriz: " + a);
+                Console.Write("{ { " + matriz1[0, 0] + "," + matriz1[0, 1] + "," + matriz1[0, 2] + "," + "}, " + "{ " + matriz1[1, 0] + "," + matriz1[1, 1] + "," + matriz1[1, 2] + "} }");
+            }
+
+            //Matriz Bidimensional com loop for
+            //Para arrays multidimensionais, você precisa de um loop para cada uma das dimensões do array.
+            //Temos que usar GetLength()em vez de Length para especificar quantas vezes o loop deve ser executado
+            int[,] matriz2 = { { 8, 5, 1 }, { 5, 3, 0 } };
+            for(int b = 0; b < matriz2.GetLength(0); b++)
+            {
+                for(int c = 0; c < matriz2.GetLength(1); c++)
+                {
+                    Console.WriteLine(matriz2[b, c]);
+                }
+            }
+
+        }
+    }
+}
