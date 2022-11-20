@@ -1,0 +1,127 @@
+//Método é um bloco de cóidgo que só é executado quando é chamado.
+//Métodos são usados para executar as funções
+
+using System;
+
+namespace Metodo
+{
+    class Metodos
+    {
+        //Chamando um método
+        static void Main(string[] args)
+        {
+            MeuMetodo();
+            //Um método pode ser chamado várias vezes
+            MeuMetodo();
+            MeuMetodo();
+            Console.WriteLine();
+
+            //Chamando o Segundo Metodo
+            SegundoMetodo("João");//Argumento do SegundoMetodo
+            SegundoMetodo("Maria");//Argumento do SegundoMetodo
+            SegundoMetodo("José");//Argumento do SegundoMetodo
+            Console.WriteLine();
+
+            //Chamando mais de um argumento = nome e idade
+            TerceiroMetodo("João", 25);//Argumento do TerceiroMetodo - nome e idade
+            TerceiroMetodo("Maria", 32);//Argumento do TerceiroMetodo - nome e idade
+            TerceiroMetodo("José", 54);//Argumento do TerceiroMetodo - nome e idade
+            Console.WriteLine();
+
+            //Chamando argumentos para o QuartoMetodo
+            Quartometodo("Suécia");
+            Quartometodo("India");
+            Quartometodo();
+            Quartometodo("Brasil");
+            Console.WriteLine();
+
+            //Chamando o quinto metodo
+            Console.WriteLine("x = 3. A soma de 5 + x é: " + QuintoMetodo(3)); //o 3 equivale ao valor de x, do quinto método
+            Console.WriteLine();
+
+            //Chamando o Sexto Método
+            Console.WriteLine("O valor de a é 12. O valor de b é 10. A soma de a + b é: " + SextoMetodo(12, 10));
+            Console.WriteLine();
+
+            //Chamando o Sétimo Método
+            int variavel = SetimoMetodo(2, 3, 2);
+            Console.WriteLine("O valor de c = 2. O valor de d = 3. O valor de e = 2. A soma de c + d + e = " + variavel);
+            Console.WriteLine();
+
+            //Chamando o Oitavo Método
+            Oitavometodo( idade3: "40", idade1: "25", idade2: "30");
+
+            //Chamando o Nonometodo
+            int numero1 = Nonometodo(9, 5);
+            double numero2 = Nonometodo(4.3, 6.26);
+            Console.WriteLine("Int: " + numero1);
+            Console.WriteLine("Double: " + numero2);
+        }
+
+        //Criando um método dentro de uma classe
+        static void MeuMetodo()
+        {
+            //Meu Método é o nome do Método
+            //static significa que o Método pertence à classe Metodos
+            //void significa que este Método não tem valor de retorno
+
+            //Mostrando o resultado
+            Console.WriteLine("Executado com sucesso!");
+        }
+
+        //Método utilizando Parâmetros e Argumentos
+        //Parâmetro usado será fname - ou seja inserir mesmo sobrenome
+        //Quando um parâmetro é passado para o método, ele é chamado de argumento 
+        static void SegundoMetodo(string sobrenome)
+        {
+            Console.WriteLine(sobrenome + " Ciclano");
+        }
+
+        //Novo método com mais de um parâmetro
+        static void TerceiroMetodo(string sobrenome, int idade)
+        {
+            Console.WriteLine(sobrenome + " Ciclano" + " idade: " + idade);
+        }   
+        
+        //Parâmetro padrão = 
+        static void Quartometodo (string país = "Estados Unidos") //país é um parâmetro opcional e Estados unidos é um valor padrão
+        {
+            Console.WriteLine(país);
+        }
+
+        //usando métodos que retornam valores - podemos usar um tipo de dados primitivo (como int ou double) em vez de void, e usar a palavra- return chave dentro do método
+        static int QuintoMetodo (int x)
+        {
+            return 5 + x;
+        }
+
+        //Somando dois parâmetros em um método
+        static int SextoMetodo (int a, int b)
+        {
+            return a + b;
+        }
+
+        //Somando parâmetros e armazenando em uma váriavel
+        static int SetimoMetodo (int c, int d, int e)
+        {
+            return c + d + e;
+        }
+
+        //Nomeando Argumentos
+        static void Oitavometodo(string idade1, string idade2, string idade3)
+        {
+            Console.WriteLine("Idades:{"+ idade1 + "," + idade2 + "," + idade3 + "}");
+            Console.WriteLine("A maior idade é: " + idade3);
+        }
+
+        //Sobrecarga de um método = vários métodos podem ter o mesmo nome com parâmetros diferentes
+        static int Nonometodo(int f, int g)
+        {
+            return f + g;
+        }
+        static double Nonometodo(double f, double g)
+        {
+            return f + g;
+        }
+    }
+}
