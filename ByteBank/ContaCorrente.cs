@@ -1,28 +1,32 @@
+using ByteBank.Titular;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
+namespace ByteBank.ContaCorrente
 {
     public class ContaCorrente
     {
         public int numero_agencia;
         public string conta;
-        public string titular;
         public double saldo = 100;
+
+        public Cliente titular;
+
+
 
         public void Depositar(double valor) //criado o objeto de depósito = novo comportamento da classe ContaCorrente, método Depositar na conta corrente
         {
-            this.saldo += valor; //this se refere ao próprio objeto criado
+            saldo += valor; //this se refere ao próprio objeto criado
         }
 
         public bool Sacar(double saque) //criando o método sacar - bool, pois se conseguir efeutar  saque return true
         {
-            if (saque <= this.saldo)
+            if (saque <= saldo)
             {
-                this.saldo -= saque;
+                saldo -= saque;
                 return true;
             }
             else
@@ -32,13 +36,13 @@ namespace ByteBank
         }
         public bool Transferir(double valor, ContaCorrente destino)
         {
-            if(this.saldo < valor)
+            if (saldo < valor)
             {
                 return false;
             }
             else
             {
-                this.Sacar(valor);
+                Sacar(valor);
                 destino.Depositar(valor);
                 return true;
             }
@@ -46,10 +50,10 @@ namespace ByteBank
 
         public void ExibirInformacoes()
         {
-            Console.WriteLine("Numero_agencia: " + this.numero_agencia);
-            Console.WriteLine("Conta: " + this.conta);
-            Console.WriteLine("titular: " + this.titular);
-            Console.WriteLine("Saldo: " + this.saldo);
+            Console.WriteLine("Numero_agencia: " + numero_agencia);
+            Console.WriteLine("Conta: " + conta);
+            Console.WriteLine("titular: " + titular);
+            Console.WriteLine("Saldo: " + saldo);
         }
     }
 
