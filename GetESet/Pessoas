@@ -1,0 +1,18 @@
+// Get = Somente leitura
+// Set = Somente gravação
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GetESet.Pessoas
+{
+    class Pessoas
+    {
+        private string nome;
+        public string Nome
+          { get; set; }
+    }
+}
