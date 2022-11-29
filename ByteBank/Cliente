@@ -8,8 +8,17 @@ namespace ByteBank.Titular
 {
     public class Cliente
     {
-        public string nome;
-        public string cpf;
-        public string profissao;
+        public string nome { get; set; }
+        public string cpf { get; set; }
+        public string profissao { get; set; }
+
+        public static int TotalClientes { get; set; }
+
+        //Criando um Construtor = Constrói o objeto. Tem o mesmo nome da classe e é público
+        public Cliente()
+        {
+            TotalClientes = TotalClientes + 1;
+        }
+
     }
 }
