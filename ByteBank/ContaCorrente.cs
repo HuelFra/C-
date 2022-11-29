@@ -1,3 +1,16 @@
+/*
+public: acessível de qualquer ponto do código, ou seja não impõe restrições;
+
+private: acessível somente dentro do contexto onde foi declarado, ou seja, um membro privado dentro de uma classe só é acessível dentro da própria classe;
+
+protected: o elemento é acessível dentro da classe e suas derivadas;
+
+internal: é o padrão no C#. Caso nenhum modificador seja declarado, definirá a acessibilidade do elemento dentro do executável ou dll onde foi declarado;
+
+protected internal: é proveniente união dos modificadores protected e internal. 
+*/
+
+
 using ByteBank.Titular;
 using System;
 using System.Collections.Generic;
@@ -9,11 +22,30 @@ namespace ByteBank.ContaCorrente
 {
     public class ContaCorrente
     {
-        public int numero_agencia;
-        public string conta;
-        public double saldo = 100;
 
-        public Cliente titular;
+        public static int TotalContasCriadas { get; private set; } //static passa a ser objeto da classe e não do objeto
+
+
+
+        public int numero_agencia;
+        public int Numero_agencia
+        {
+            get { return this.numero_agencia; }
+            private set
+            {
+                if (value > 0)
+                {
+                    this.numero_agencia = value;
+                }
+            }
+        }
+
+        public string conta;
+        public string Conta { get; set; }
+
+        private double saldo = 100;
+
+        public Cliente titular { get; set; }
 
 
 
@@ -54,6 +86,42 @@ namespace ByteBank.ContaCorrente
             Console.WriteLine("Conta: " + conta);
             Console.WriteLine("titular: " + titular);
             Console.WriteLine("Saldo: " + saldo);
+        }
+
+        public void SetSaldo(double valor) //Set = Definir
+        {
+            if(valor < 0)
+            {
+                return;
+            }
+            else
+            {
+                this.saldo = valor;
+            }
+        }
+        public double GetSaldo() //Get = Obter
+        {
+            return this.saldo;
+        }
+        public void DefinirSaldo(double valor)
+        {
+            if (valor < 0)
+            {
+                return;
+            }
+            else
+            {
+                saldo = saldo + valor;
+            }
+        }
+
+        public ContaCorrente(int numero_agencia, string numero_conta)
+        {
+            this.numero_agencia = numero_agencia;
+            this.conta = numero_conta;
+            //Incrementando a propriedade
+            TotalContasCriadas++;
+
         }
     }
 
