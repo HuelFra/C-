@@ -101,10 +101,10 @@ using System;
 //Console.WriteLine(conta4.Numero_agencia);
 //Console.WriteLine(conta4.conta);
 
-ContaCorrente conta5 = new ContaCorrente(234, "1234-X");
-ContaCorrente conta6 = new ContaCorrente(432, "2314-X");
-ContaCorrente conta7 = new ContaCorrente(332, "1111-X");
-ContaCorrente conta8 = new ContaCorrente(765, "0984-X");
+ContaCorrente conta5 = new ContaCorrente("Maria Fulana", 234, "1234-X");
+ContaCorrente conta6 = new ContaCorrente("José Cicrano", 432, "2314-X");
+ContaCorrente conta7 = new ContaCorrente("Ana Beltrana", 332, "1111-X");
+ContaCorrente conta8 = new ContaCorrente("Anonymous", 765, "0984-X");
 Console.WriteLine("Total de Contas Criadas: " + ContaCorrente.TotalContasCriadas);
 
 Cliente cliente1 = new Cliente();
