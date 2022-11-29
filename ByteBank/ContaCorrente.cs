@@ -1,15 +1,10 @@
 /*
 public: acessível de qualquer ponto do código, ou seja não impõe restrições;
-
 private: acessível somente dentro do contexto onde foi declarado, ou seja, um membro privado dentro de uma classe só é acessível dentro da própria classe;
-
 protected: o elemento é acessível dentro da classe e suas derivadas;
-
 internal: é o padrão no C#. Caso nenhum modificador seja declarado, definirá a acessibilidade do elemento dentro do executável ou dll onde foi declarado;
-
 protected internal: é proveniente união dos modificadores protected e internal. 
 */
-
 
 using ByteBank.Titular;
 using System;
@@ -115,14 +110,13 @@ namespace ByteBank.ContaCorrente
             }
         }
 
-        public ContaCorrente(int numero_agencia, string numero_conta)
+        public ContaCorrente(string titular, int numero_agencia, string numero_conta)
         {
+            titular = titular;
             this.numero_agencia = numero_agencia;
             this.conta = numero_conta;
             //Incrementando a propriedade
             TotalContasCriadas++;
-
         }
     }
-
 }
