@@ -1,0 +1,31 @@
+using bytebank_ADM;
+using bytebank_ADM.Funcionarios;
+using bytebank_ADM.Utilitario;
+using System;
+
+Funcionario pedro = new Funcionario();
+pedro.nome = "Pedro Malazartes";
+pedro.cpf = "123456789";
+pedro.salario = 2000;
+
+Console.WriteLine("Nome: " + pedro.nome);
+Console.WriteLine("Salário: " +pedro.salario);
+Console.WriteLine("Bonificação: " + pedro.GetBonificacao());
+Console.WriteLine("---------------------------------------------");
+
+Diretor joao = new Diretor();
+joao.nome = "João Fulano";
+joao.cpf = "987654320";
+joao.salario = 10000;
+
+Console.WriteLine("Nome: " + joao.nome);
+Console.WriteLine("Salário: " + joao.salario);
+Console.WriteLine("Bonificação: " + joao.GetBonificacao());
+Console.WriteLine("---------------------------------------------");
+
+GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+gerenciador.Registrar(pedro);
+gerenciador.Registrar(joao);
+
+Console.WriteLine("Total de Bonificações: " + gerenciador.TotalBonificacao);
+Console.WriteLine("---------------------------------------------");
