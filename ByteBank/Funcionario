@@ -13,9 +13,14 @@ namespace bytebank_ADM.Funcionarios
         public string cpf { get; set; }
         public double salario { get; set; }
 
-       public double GetBonificacao()
+        public virtual double GetBonificacao() //virtual permite que GetBonificacao seja sobreposta quando necessário
         {
            return this.salario * 0.10;
+        }
+
+        public virtual double PremioSemestral()
+        {
+            return this.salario * 0.20;
         }
     }
 }
