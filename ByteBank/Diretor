@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bytebank_ADM
+{
+    public class Diretor
+    {
+        public string nome { get; set; }
+        public string cpf { get; set; }
+        public double salario { get; set; }
+
+        public double GetBonificacao()
+        {
+            return this.salario;
+        }
+    }
+}
