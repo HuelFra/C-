@@ -1,0 +1,41 @@
+using OperacoesBasicas.Dividir;
+using OperacoesBasicas.Multiplicar;
+using OperacoesBasicas.Soma;
+using OperacoesBasicas.Subtrair;
+
+Soma primeirasoma = new Soma();
+primeirasoma.num1 = 5;
+primeirasoma.num2 = 6;
+
+Console.WriteLine("Número 1: " + primeirasoma.num1);
+Console.WriteLine("Número 2: " + primeirasoma.num2);
+Console.WriteLine("A soma dos números é: " + (primeirasoma.num1 + primeirasoma.num2));
+Console.WriteLine("----------------------------------------------------------");
+
+Subtrair primeirasubtracao = new Subtrair();
+primeirasubtracao.num1 = 5;
+primeirasubtracao.num2 = 6;
+
+Console.WriteLine("Número 1: " + primeirasubtracao.num1);
+Console.WriteLine("Número 2: " + primeirasubtracao.num2);
+Console.WriteLine("A multiplicação dos números é: " + (primeirasubtracao.num1 - primeirasubtracao.num2));
+Console.WriteLine("----------------------------------------------------------");
+
+Multiplicar primeiramultiplicacao = new Multiplicar();
+primeiramultiplicacao.num1 = 5;
+primeiramultiplicacao.num2 = 6;
+
+Console.WriteLine("Número 1: " + primeiramultiplicacao.num1);
+Console.WriteLine("Número 2: " + primeiramultiplicacao.num2);
+Console.WriteLine("A multiplicação dos números é: " + (primeiramultiplicacao.num1 * primeiramultiplicacao.num2));
+Console.WriteLine("----------------------------------------------------------");
+
+Dividir primeiradivisao = new Dividir();
+primeiradivisao.num1 = 5;
+primeiradivisao.num2 = 6;
+
+Console.WriteLine("Número 1: " + primeiradivisao.num1);
+Console.WriteLine("Número 2: " + primeiradivisao.num2);
+Console.WriteLine("A divisão dos números é: " + (primeiradivisao.num1 / primeiradivisao.num2));
+Console.WriteLine("----------------------------------------------------------");
+
