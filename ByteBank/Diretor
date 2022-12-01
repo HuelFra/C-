@@ -1,3 +1,4 @@
+using bytebank_ADM.Funcionarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,19 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM
 {
-    public class Diretor
-    {
-        public string nome { get; set; }
-        public string cpf { get; set; }
-        public double salario { get; set; }
 
-        public double GetBonificacao()
+    public class Diretor:Funcionario
+    {
+        //Para indicar que trata-se da redefinição de comportamento da classe base, o método deve
+        //usar em sua assinatura a palavra chave override.
+        //Na definição deste método na classe base, a palavra virtual.
+        public override double GetBonificacao() //override é para sobrepor GetBonificação quando for Diretor
         {
-            return this.salario;
+            return this.salario + base.GetBonificacao(); //permite acessar implementações de propriedades existentes na classe base, na superclasse da qual diretor herda seus atributos,métodos e propriedades
+        }
+        public override double PremioSemestral()
+        {
+            return this.salario + base.PremioSemestral();
         }
     }
 }
