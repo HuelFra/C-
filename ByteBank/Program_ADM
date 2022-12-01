@@ -11,16 +11,18 @@ pedro.salario = 2000;
 Console.WriteLine("Nome: " + pedro.nome);
 Console.WriteLine("Salário: " +pedro.salario);
 Console.WriteLine("Bonificação: " + pedro.GetBonificacao());
+Console.WriteLine("Prêmio Semestral: " + pedro.PremioSemestral());
 Console.WriteLine("---------------------------------------------");
 
 Diretor joao = new Diretor();
 joao.nome = "João Fulano";
 joao.cpf = "987654320";
-joao.salario = 10000;
+joao.salario = 5000;
 
 Console.WriteLine("Nome: " + joao.nome);
 Console.WriteLine("Salário: " + joao.salario);
 Console.WriteLine("Bonificação: " + joao.GetBonificacao());
+Console.WriteLine("Prêmio Semestral: " + joao.PremioSemestral());
 Console.WriteLine("---------------------------------------------");
 
 GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
