@@ -1,31 +1,26 @@
-using bytebank_ADM;
 using bytebank_ADM.Funcionarios;
-using bytebank_ADM.Utilitario;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.PortableExecutable;
+using System.Text;
+using System.Threading.Tasks;
 
-Funcionario pedro = new Funcionario();
-pedro.nome = "Pedro Malazartes";
-pedro.cpf = "123456789";
-pedro.salario = 2000;
+namespace bytebank_ADM.Utilitario
+{
+    public class GerenciadorDeBonificacao
+    {
+        public double TotalBonificacao { get; private set; } //como é uma classe de somente leitura, o set será private
+    
+        public void Registrar(Funcionario funcionario)
+        {
+            this.TotalBonificacao += funcionario.GetBonificacao();
+        }
 
-Console.WriteLine("Nome: " + pedro.nome);
-Console.WriteLine("Salário: " +pedro.salario);
-Console.WriteLine("Bonificação: " + pedro.GetBonificacao());
-Console.WriteLine("---------------------------------------------");
+        public void Registrar(Diretor diretores)
+        {
+            this.TotalBonificacao += diretores.GetBonificacao();
+        }
+    }
 
-Diretor joao = new Diretor();
-joao.nome = "João Fulano";
-joao.cpf = "987654320";
-joao.salario = 10000;
-
-Console.WriteLine("Nome: " + joao.nome);
-Console.WriteLine("Salário: " + joao.salario);
-Console.WriteLine("Bonificação: " + joao.GetBonificacao());
-Console.WriteLine("---------------------------------------------");
-
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-gerenciador.Registrar(pedro);
-gerenciador.Registrar(joao);
-
-Console.WriteLine("Total de Bonificações: " + gerenciador.TotalBonificacao);
-Console.WriteLine("---------------------------------------------");
+}
