@@ -1,0 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OperacoesBasicas.Dividir
+{
+    public class Dividir
+    {
+        public double num1 { get; set; }
+        public double num2 { get; set; }
+    }
+}
